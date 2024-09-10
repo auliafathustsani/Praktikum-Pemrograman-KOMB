@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int a,b,c;
+    int a, b, c, hasil, bilangan_terbesar;
     
     cout<<"Inputkan bilangan 1 : ";
     cin>> a;
@@ -12,12 +12,30 @@ int main(){
     cin>> c;
     
     if (a>b && a>c){
-        cout << "Bilangan terbesarnya adalah : "<<a<<endl;
+        hasil = 1;
     } else if (b>a && b>c) {
-        cout << "Bilangan terbesarnya adalah : "<<b<<endl;
+        hasil = 2;
     } else if (c>a && c>b){
-        cout << "Bilangan terbesarnya adalah : "<<c<<endl;
+        hasil = 3;
     }
-        
+    
+    switch(hasil){
+        case 1:
+            bilangan_terbesar = a;
+            break;
+        case 2:
+            bilangan_terbesar = b;
+            break;
+        case 3:
+            bilangan_terbesar = c;
+            break;
+        default:
+            cout << "Terjadi kesalahan dalam perhitungan." << endl;
+    }    
+    
+    cout << "Bilangan terbesar adalah : " << bilangan_terbesar << endl;
+    
+    
     return 0;
+    
 }
