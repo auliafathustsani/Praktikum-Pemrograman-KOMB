@@ -1,1 +1,23 @@
+#include <iostream>
+using namespace std;
 
+int main(){
+    int a,b,c;
+    
+    cout<<"Inputkan bilangan 1 : ";
+    cin>> a;
+    cout<<"Inputkan bilangan 2 : ";
+    cin>> b;
+    cout<<"Inputkan bilangan 3 : ";
+    cin>> c;
+    
+    if (a>b && a>c){
+        cout << "Bilangan terbesarnya adalah : "<<a<<endl;
+    } else if (b>a && b>c) {
+        cout << "Bilangan terbesarnya adalah : "<<b<<endl;
+    } else if (c>a && c>b){
+        cout << "Bilangan terbesarnya adalah : "<<c<<endl;
+    }
+        
+    return 0;
+}
