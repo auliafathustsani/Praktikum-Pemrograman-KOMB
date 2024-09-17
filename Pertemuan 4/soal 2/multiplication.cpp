@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
-int main(){
-	
+int main()
+{
 	int n;
-	cout<<"Input :";
+	cout<<"Input : ";
 	cin>>n;
 	
 	cout<<"Output :"<<endl;
