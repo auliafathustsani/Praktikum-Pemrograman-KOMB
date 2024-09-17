@@ -1,13 +1,15 @@
-all: code1
+# Target to compile the C++ program
+code1 : code1.o
+	g ++ code1.o -o code1
 
-code1: code1.cpp
-	g++ -o code1 code1.cpp
+# Target to compile the object file
+code1.o : code1.cpp
+	g ++ -c code1.cpp -o code1.o
 
-dump: code1
-	objdump -d code1 > code1.asm
-
-clean: 
-	rm -f code1 code1.asm
-
-run: code1
+# Target to run the program
+run : code1
 	./code1
+
+# Target to clean up compiled files
+clean :
+	rm -f code1.o code1
