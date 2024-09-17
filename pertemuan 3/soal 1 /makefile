@@ -9,5 +9,5 @@ dump: code1
 clean: 
 	rm -f code1 code1.asm
 
-rum: code1
+run: code1
 	./code1
