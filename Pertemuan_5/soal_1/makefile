@@ -1,15 +1,15 @@
 # Target to compile the C++ program
-FizzBuzz: FizzBuzz.o
-    g++ FizzBuzz.o -o FizzBuzz
+fizzbuzz: fizzbuzz.o
+    g++ fizzbuzz.o -o fizzbuzz
 
 # Target to compile the object file
-FizzBUzz.o: FizzBuzz.cpp
-    g++ -c FizzBuzz.cpp -o FizzBuzz.o
+fizzbUzz.o: fizzbuzz.cpp
+    g++ -c fizzbuzz.cpp -o fizzbuzz.o
 
 # Target to run the program
-run: FizzBuzz
-    ./FizzBuzz
+run: fizzbuzz
+    ./fizzbuzz
 
 # Target to clean up compiled files
 clean :
-    rm -f FizzBuzz.o FizzBuzz
+    rm -f fizzbuzz.o fizzbuzz
