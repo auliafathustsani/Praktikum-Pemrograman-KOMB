@@ -1,15 +1,15 @@
 # Target to compile the C++ program
-ReverseArray: ReverseArray.o
-    g++ ReverseArray.o -o ReverseArray
+reversearray: reversearray.o
+    g++ reversearray.o -o reversearray
 
 # Target to compile the object file
-ReverseArray.o: ReverseArray.cpp
-    g++ -c ReverseArray.cpp -o ReverseArray.o
+reversearray.o: reversearray.cpp
+    g++ -c reversearray.cpp -o reversearray.o
 
 # Target to run the program
-run: ReverseArray
-    ./ReverseArray
+run: reversearray
+    ./reversearray
 
 # Target to clean up compiled files
 clean :
-    rm -f ReverseArray.o ReverseArray
+    rm -f reversearray.o reversearray
