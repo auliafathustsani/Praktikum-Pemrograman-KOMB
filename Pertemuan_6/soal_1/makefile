@@ -1,15 +1,23 @@
-# Target to compile the C++ program
-barang : barang.o
-	g++ barang.o -o barang
+# Variables
+CXX = g++
+CXXFLAGS = -Wall
+TARGET = barang
+SRC = barang.cpp
 
-# Target to compile the object file
-barang.o : barang.cpp
-	g++ -c barang.cpp -o barang.o
+# Default target: compile the program
+all: $(TARGET)
 
-# Target to run the program
-run : barang
-	./barang
+# Compile the barang.cpp
+$(TARGET): $(SRC)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
-# Target to clean up compiled files
-clean :
-	rm -f barang.o barang
+# Run the program in test mode (using test.txt)
+test: $(TARGET)
+	./$(TARGET) test
+
+# Clean up the compiled files
+clean:
+	rm -f $(TARGET)
+
+# Phony targets to avoid conflicts
+.PHONY: all clean test
