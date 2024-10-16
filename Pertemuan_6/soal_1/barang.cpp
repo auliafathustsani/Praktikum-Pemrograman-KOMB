@@ -11,37 +11,34 @@ struct barang{
 
 int main() {
     
-    int n, totaljumlah=0;
+    int n=3; 
+    int totaljumlah=0;
 	float totalharga=0.0, ratarataharga;
-    barang barang [50];
+	
+    barang barang [50]={
+        {101, "Beras", 15000.0, 5},
+	{201, "Minyak", 14000.0, 4},
+	{301, "Garam", 5000.0, 7}
+    };
     
-    cout<<"Masukkan banyak jenis barang : ";
-    cin>>n;
-    cout<<endl;
-    
-    for (int i=0; i<n; i++){
-        cout<<"Kode Barang : ";
-        cin>>barang[i].kode;
-        
-        cout<<"Nama Barang : ";
-        cin>>barang[i].nama;
-        
-        cout<<"Harga Barang : ";
-        cin>>barang[i].harga;
-        
-        cout<<"Jumlah Barang : ";
-        cin>>barang[i].jumlah;
-        cout<<endl;
-        
-        totaljumlah+=barang[i].jumlah;
-        totalharga+=barang[i].harga*barang[i].jumlah;
+    for (int i=0; i < n; i++){
+        totaljumlah += barang[i].jumlah;
+        totalharga += barang[i].harga*barang[i].jumlah;
     }
-    cout<<endl;
-    
+	
     ratarataharga=totalharga/totaljumlah;
+    
+    int expected_jumlah = 16;
+    float expected_ratarata = 10375.0;
     
     cout<<"Jumlah semua barang :"<<totaljumlah<<endl;
     cout<<"Harga rata-rata barang :"<<ratarataharga<<endl;
+    
+     if (totaljumlah == expected_jumlah && ratarataharga == expected_ratarata) {
+        cout << "Test Passed" << endl;
+    } else {
+        cout << "Test Failed" << endl;
+    }
     
     return 0;
 }
