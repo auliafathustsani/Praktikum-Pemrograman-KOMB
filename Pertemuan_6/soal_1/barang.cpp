@@ -3,7 +3,7 @@
 using namespace std;
 
 struct barang{
-    int kode;
+    string kode;
     string nama;
     float harga;
     int jumlah;
