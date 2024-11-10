@@ -12,7 +12,7 @@ int fibonacci(int n) {
 int main() {
     int n = 5;
     int expected_output = fibonacci(n);
-    cout << "Fibonacci ke-" << n << " adalah " << expected_output;
+    cout << "Fibonacci ke-" << n << " adalah " << expected_output << endl;
 
 	if (expected_output == 5){
 		cout << "Test Passed" << endl;
