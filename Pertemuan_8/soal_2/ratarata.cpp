@@ -11,11 +11,11 @@ double rekursifratarata(int array[], int n) {
 
 int main() {
     int n = 5;
-    int array[]= {1,2,3,4,5};
+    int array[]= {11,13,15,17,21};
 
     double ratarata = rekursifratarata(array, n);
     cout << "Rata-rata: " << ratarata << endl;
-     if (ratarata == 3) {
+     if (ratarata == 15.4 ) {
         cout << "Test Passed" << endl;
     } else {
         cout << "Test Failed" << endl;
@@ -23,4 +23,3 @@ int main() {
 
     return 0;
 }
-
