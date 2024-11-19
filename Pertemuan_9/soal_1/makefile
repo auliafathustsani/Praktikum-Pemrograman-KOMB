@@ -1,13 +1,13 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = ratarata
-SRC = ratarata.cpp
+TARGET = data
+SRC = data.cpp
 
 # Default target: compile the program
 all: $(TARGET)
 
-# Compile the ratarata.cpp
+# Compile the data.cpp
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
