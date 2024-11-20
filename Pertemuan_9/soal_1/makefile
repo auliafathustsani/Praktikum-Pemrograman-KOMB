@@ -20,4 +20,4 @@ clean:
 	rm -f $(TARGET)
 
 # Phony targets to avoid conflicts
-.PHONY: all clean tes
+.PHONY: all clean test
